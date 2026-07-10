@@ -18,6 +18,22 @@ hétről hétre „nyílik ki": mindig azt a részét használd, ahol a képzés
 3. **Tedd be a saját briefed** a `knowledge-base/brief.md` helyére (a mostani egy dummy).
 4. A Cursor chatben írd be: `/` — és válaszd a parancsot, ahol a kurzusban tartasz.
 
+## Több projekt? Egy projekt = egy másolat
+
+Ez a repo **projekt-sablon**, nem központi motor. Minden új kliensprojekthez
+készíts friss másolatot (klónozd újra, vagy másold le a mappát új néven) —
+saját `knowledge-base`-szel, saját `CLAUDE.md`-vel, saját `output`-tal.
+
+Miért így?
+- **Nem keverednek a kontextusok** — az egyik kliens personái nem szivárognak
+  át a másik projektjébe.
+- **Tiszta handover** — a teljes projektmappa egyben átadható a kliensnek.
+- **Saját git-történet** — projektenként látszik, mi mikor és miért változott.
+
+Ha mégis több brief kerül a `knowledge-base`-be, a `/ux-research` megáll,
+és betűjeles menüben rákérdez, melyikkel dolgozzon — de a tiszta út az
+egy-projekt-egy-mappa.
+
 ## Mi van benne — a kurzus hetei szerint
 
 | Hét | Amit használsz | Hol |

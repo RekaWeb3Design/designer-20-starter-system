@@ -5,6 +5,12 @@ Run the full UX research flow based on the brief in /knowledge-base.
 ## Context
 - Read knowledge-base/brief.md first. If client emails or transcripts
   exist in knowledge-base/, use them as source material.
+- MULTI-BRIEF GATE: if knowledge-base/ contains MORE than one brief-like
+  file (e.g. brief.md + brief-fodraszat.md, or two different client
+  briefs), STOP before doing anything and ask which one to use — as a
+  lettered menu (A, B, C...), one file per option, showing the client /
+  project name from each file's first lines. Never merge briefs and
+  never silently pick one.
 - Work from best practices, production grade quality.
 - LANGUAGE: write ALL outputs in the language of the brief (Hungarian
   brief -> Hungarian deliverables, with proper accents). Keep the
