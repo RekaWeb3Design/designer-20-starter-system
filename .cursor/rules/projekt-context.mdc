@@ -1,0 +1,16 @@
+---
+description: Projekt-kontextus — minden chatben betöltődik
+alwaysApply: true
+---
+
+# Projekt-kontextus (SABLON — cseréld a sajátodra)
+
+A projekt: [1 mondat].
+A kliens: [név, iparág]. Célcsoport: [kik].
+Stack: [Astro + Tailwind], deploy: Cloudflare Pages (main=éles, dev=munka).
+
+Szabályok:
+- Kérdezz vissza, mielőtt módosítasz. Kis lépésekben dolgozz.
+- Konkrét fájlokra hivatkozz, máshoz ne nyúlj.
+- Best practices, production grade. Minden működő állapot után commit.
+- A brief a knowledge-base/ mappában van — onnan dolgozz, ne találj ki tartalmat.

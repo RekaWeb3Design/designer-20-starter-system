@@ -1,0 +1,30 @@
+# UX Research
+
+Run the full UX research flow based on the brief in /knowledge-base.
+
+## Context
+- Read knowledge-base/brief.md first. If client emails or transcripts
+  exist in knowledge-base/, use them as source material.
+- Work from best practices, production grade quality.
+- The team playbooks live in .cursor/skills/ux/ — follow them:
+  ux-orchestrator coordinates; persona-builder, journey-mapper,
+  validation-question-generator and transcript-analyzer do the work.
+
+## Steps
+1. Act as ux-orchestrator: read the brief, extract the project context
+   brief summary that every specialist will receive.
+2. persona-builder: generate 3-5 personas using the Cooper frame
+   (goals, motivations, frustrations, typical daily routine).
+3. journey-mapper: build a user journey for each persona
+   (stages, actions, thoughts, emotions, touchpoints, opportunities).
+4. validation-question-generator: create a validation question set —
+   qualitative interview guide + quantitative survey questions.
+5. If transcripts are available in knowledge-base/: transcript-analyzer
+   analyzes them and cross-references the findings with the personas.
+
+## Output
+Write all results to /output/ux-research/ as separate files:
+personas.md, journeys.md, validation.md (and transcript-insights.md if run).
+
+Mark every statement that is NOT supported by the source material
+with [ASSUMPTION], so the designer can review it.
