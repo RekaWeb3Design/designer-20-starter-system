@@ -27,7 +27,9 @@ tanácsadó cégnek: leadgyűjtés B2B ügyfelektől."]
 3. Konkrét fájlokra hivatkozz, és ne nyúlj máshoz, csak amit a feladat kér.
 4. Best practices, production grade minőség — skálázható és időtálló.
 5. Minden működő állapot után commit.
-6. A brief és a kutatási anyagok a knowledge-base/ mappában — onnan dolgozz.
+6. A briefek a knowledge-base/briefs/ inboxba érkeznek; minden projekt
+   saját mappát kap (knowledge-base/briefs/<projekt-slug>/), az outputok
+   pedig /output/<fázis>/<projekt-slug>/ alá. Onnan dolgozz.
 
 ## Amit kerülj
 

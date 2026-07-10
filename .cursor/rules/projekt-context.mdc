@@ -13,4 +13,18 @@ Szabályok:
 - Kérdezz vissza, mielőtt módosítasz. Kis lépésekben dolgozz.
 - Konkrét fájlokra hivatkozz, máshoz ne nyúlj.
 - Best practices, production grade. Minden működő állapot után commit.
-- A brief a knowledge-base/ mappában van — onnan dolgozz, ne találj ki tartalmat.
+- A briefből dolgozz, ne találj ki tartalmat.
+
+Projekt-struktúra (MINDEN parancsra érvényes):
+- A briefek inboxa: knowledge-base/briefs/. Ha itt LAZA (projekt-mappán
+  kívüli) brief-fájl van, a futás ELSŐ lépése a rendszerezés: hozz létre
+  knowledge-base/briefs/<projekt-slug>/ mappát (kebab-case a kliens/projekt
+  nevéből, pl. zold-sarok-kerteszet), és helyezd ÁT bele a fájlt (mozgatás,
+  ne másolat). A projekt egyéb anyagai (emailek, transcriptek, brand-fájlok)
+  ugyanebbe a mappába valók.
+- Minden output projektenként külön mappába megy: ahol egy skill
+  /output/<fázis>/<fájl> útvonalat ír elő, a tényleges cél mindig
+  /output/<fázis>/<projekt-slug>/<fájl>.
+- Aktív projekt: ha most került be laza brief, az az aktív. Ha több
+  projekt-mappa van és nem egyértelmű, betűjeles menüben kérdezd meg a
+  designert. Két projektet SOHA ne keverj egy futásban.

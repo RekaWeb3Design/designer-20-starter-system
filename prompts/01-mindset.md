@@ -42,7 +42,7 @@ Kontextus: ezt egyedül szállítom, AI-first workflow-val, ezért a scope-nál
 azt is jelezd, mely részek automatizálhatók / sablonozhatók.
 
 Brief:
-[ide jön a brief — gyakorláshoz: knowledge-base/brief.md]
+[ide jön a brief — gyakorláshoz: knowledge-base/briefs/zold-sarok-kerteszet-brief.md]
 
 ## 4) System prompt — projekt alapbeállítás
 

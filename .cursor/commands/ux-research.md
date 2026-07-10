@@ -1,16 +1,20 @@
 # UX Research
 
-Run the full UX research flow based on the brief in /knowledge-base.
+Run the full UX research flow based on a brief from knowledge-base/briefs/.
 
 ## Context
-- Read knowledge-base/brief.md first. If client emails or transcripts
-  exist in knowledge-base/, use them as source material.
-- MULTI-BRIEF GATE: if knowledge-base/ contains MORE than one brief-like
-  file (e.g. brief.md + brief-fodraszat.md, or two different client
-  briefs), STOP before doing anything and ask which one to use — as a
-  lettered menu (A, B, C...), one file per option, showing the client /
-  project name from each file's first lines. Never merge briefs and
-  never silently pick one.
+- PROJECT FILING (always the FIRST step): briefs arrive in the inbox
+  folder knowledge-base/briefs/. If it contains any LOOSE brief file
+  (not inside a project folder), create a project folder named after
+  the client/project in kebab-case (e.g.
+  knowledge-base/briefs/zold-sarok-kerteszet/) and MOVE the file into
+  it. Related loose materials (client emails, transcripts, brand files)
+  move into the same project folder. Work from the project folder from
+  then on.
+- ACTIVE PROJECT: a freshly filed loose brief is the active project.
+  If there is no loose brief and several project folders exist, ask
+  which one to run — lettered menu (A, B, C...), one project per
+  option. Never merge two projects in one run.
 - Work from best practices, production grade quality.
 - LANGUAGE: write ALL outputs in the language of the brief (Hungarian
   brief -> Hungarian deliverables, with proper accents). Keep the
@@ -41,16 +45,17 @@ Run the full UX research flow based on the brief in /knowledge-base.
    (stages, actions, thoughts, emotions, touchpoints, opportunities).
 4. validation-question-generator: create a validation question set —
    qualitative interview guide + quantitative survey questions.
-5. If transcripts are available in knowledge-base/: transcript-analyzer
+5. If transcripts are available in the project folder: transcript-analyzer
    analyzes them and cross-references the findings with the personas.
 6. report-designer: after summary.md is written, generate report.html —
    a single self-contained, client-presentable HTML report from the
    markdown outputs (see .cursor/skills/ux/report-designer/SKILL.md).
 
 ## Output
-Write all results to /output/ux-research/ as separate files:
-personas.md, journeys.md, validation.md (and transcript-insights.md if
-run), summary.md, and report.html as the client-facing package.
+Write all results to /output/ux-research/<projekt-slug>/ (same slug
+as the project folder) as separate files: personas.md, journeys.md,
+validation.md (and transcript-insights.md if run), summary.md, and
+report.html as the client-facing package.
 
 Mark every statement that is NOT supported by the source material
 with [ASSUMPTION], so the designer can review it.

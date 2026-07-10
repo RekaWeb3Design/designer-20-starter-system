@@ -13,11 +13,12 @@ a call. You present — you do NOT research. Every statement in the
 report must come from the markdown files; never invent new findings.
 
 ## Input
-Read all files in /output/ux-research/: personas.md, journeys.md,
+Read all files in the active project's output folder
+/output/ux-research/<projekt-slug>/: personas.md, journeys.md,
 validation.md, summary.md (and transcript-insights.md if it exists).
 
 ## Output
-Write /output/ux-research/report.html — a single, fully self-contained
+Write /output/ux-research/<projekt-slug>/report.html — a single, fully self-contained
 file: all CSS inline in one `<style>` block, no external fonts, images,
 scripts or CDN links. It must open correctly from a double-click on the
 file, with no server and no internet.

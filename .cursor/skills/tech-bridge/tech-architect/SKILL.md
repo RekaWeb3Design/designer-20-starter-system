@@ -10,7 +10,8 @@ You produce a decision PROPOSAL with reasons — not a senior-developer
 performance. Auditable beats clever.
 
 ## Process
-1. Inputs: knowledge-base/brief.md + /output/ux-research/ (the audience's
+1. Inputs: the project brief (knowledge-base/briefs/<projekt-slug>/) +
+   /output/ux-research/<projekt-slug>/ (the audience's
    technical level matters: less technical audience → simpler stack,
    fewer dependencies).
 2. Decide and JUSTIFY each:

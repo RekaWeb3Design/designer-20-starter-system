@@ -8,7 +8,8 @@ description: Build 3-5 evidence-based personas from a project brief
 # Persona Builder
 
 ## Process
-1. Read the brief and all client material in /knowledge-base.
+1. Read the brief and all client material in the active project folder
+   (knowledge-base/briefs/<projekt-slug>/).
 2. Identify the distinct user groups actually supported by the material.
 3. Build 3-5 personas. For each, include:
    - Name, role, context (B2B / B2C)
@@ -27,4 +28,4 @@ description: Build 3-5 evidence-based personas from a project brief
   lost — put context-level assumptions in ONE note at the top instead.
 
 ## Output
-/output/ux-research/personas.md
+/output/ux-research/<projekt-slug>/personas.md

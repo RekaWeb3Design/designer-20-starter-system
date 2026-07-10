@@ -3,7 +3,8 @@
 Run the full 11-agent chain: brief → live URL.
 
 ## Phase 1 — Architecture (Tech Bridge, start)
-1. tech-architect (.cursor/skills/tech-bridge/): read knowledge-base/brief.md
+1. tech-architect (.cursor/skills/tech-bridge/): read the project brief (knowledge-base/briefs/<projekt-slug>/;
+   the folder convention is in .cursor/rules/projekt-context.mdc)
    + the UX output. Decide frontend framework, hosting, database,
    integrations. Write /output/tech-stack.md with reasoning for EVERY decision.
 

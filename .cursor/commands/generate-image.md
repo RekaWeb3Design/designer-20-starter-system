@@ -1,8 +1,9 @@
 # /generate-image
 
 Brand-irány alapján generálj image-promptokat.
-Olvasd be előbb a brand.md-t (ha van) a knowledge-base-ből vagy az
-/output/landing-design/ mappából.
+Olvasd be előbb a brand.md-t (ha van) a projekt-mappából
+(knowledge-base/briefs/<projekt-slug>/) vagy az
+/output/landing-design/<projekt-slug>/ mappából.
 
 ## Kérdések, amiket felteszel, mielőtt bármit generálsz
 - Melyik platformon dolgozunk? (ChatGPT / Higgsfield / Freepik)

@@ -2,13 +2,13 @@
 name: transcript-analyzer
 description: Analyze client interview/meeting transcripts and
   cross-reference the findings with the personas. Use during UX research
-  ONLY when transcripts exist in knowledge-base/.
+  ONLY when transcripts exist in the active project folder.
 ---
 
 # Transcript Analyzer
 
 ## Process
-1. Read every transcript-*.md in knowledge-base/.
+1. Read every transcript-*.md in knowledge-base/briefs/<projekt-slug>/.
 2. Extract, with short quotes as evidence:
    - Recurring pain points (grouped by theme)
    - Explicit wishes and feature requests
@@ -23,4 +23,4 @@ description: Analyze client interview/meeting transcripts and
   smooth them over.
 
 ## Output
-/output/ux-research/transcript-insights.md
+/output/ux-research/<projekt-slug>/transcript-insights.md

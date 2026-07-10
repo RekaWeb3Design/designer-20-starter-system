@@ -4,7 +4,10 @@ Run the full UI accelerator flow: from brief + UX output to design tokens,
 copy and a working local preview.
 
 ## Context
-- Inputs: knowledge-base/brief.md AND /output/ux-research/ (run /ux-research
+- PROJECT FOLDERS: the convention in .cursor/rules/projekt-context.mdc
+  applies — inputs come from knowledge-base/briefs/<projekt-slug>/, and
+  every /output/... path below gets a <projekt-slug>/ subfolder.
+- Inputs: the project brief AND /output/ux-research/<projekt-slug>/ (run /ux-research
   first if it does not exist yet).
 - If /output/tech-stack.md exists (from /build-project), treat it as a
   constraint; otherwise default to Astro + Tailwind, static-first.

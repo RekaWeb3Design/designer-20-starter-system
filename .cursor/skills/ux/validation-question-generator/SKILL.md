@@ -23,4 +23,4 @@ description: Generate a validation question set (qualitative interview
   ("mikor legutóbb...", not "használnád-e...").
 
 ## Output
-/output/ux-research/validation.md
+/output/ux-research/<projekt-slug>/validation.md

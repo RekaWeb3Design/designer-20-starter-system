@@ -7,7 +7,7 @@ description: Build a user journey for every persona produced by
 # Journey Mapper
 
 ## Process
-1. Read /output/ux-research/personas.md — one journey per persona.
+1. Read /output/ux-research/<projekt-slug>/personas.md — one journey per persona.
 2. For each journey, map these columns per stage:
    - Stage name (awareness → consideration → action → after)
    - Actions (what the user actually does)
@@ -27,4 +27,4 @@ description: Build a user journey for every persona produced by
   lost — put context-level assumptions in ONE note at the top instead.
 
 ## Output
-/output/ux-research/journeys.md
+/output/ux-research/<projekt-slug>/journeys.md
