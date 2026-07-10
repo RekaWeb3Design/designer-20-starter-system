@@ -9,6 +9,12 @@ Run the full UX research flow based on the brief in /knowledge-base.
 - LANGUAGE: write ALL outputs in the language of the brief (Hungarian
   brief -> Hungarian deliverables, with proper accents). Keep the
   [ASSUMPTION] marker itself unchanged.
+- HARD GATE — check this BEFORE writing any output file: if the brief
+  does not explicitly define the target audience, STOP. Do NOT create
+  any files. Ask the designer ONE clarifying question about the
+  audience, then WAIT for the answer. Noting the gap and proceeding
+  with [ASSUMPTION] tags is NOT acceptable — that path is only allowed
+  after the designer explicitly replies "proceed" / "dolgozz tovabb".
 - The team playbooks live in .cursor/skills/ux/ — follow them:
   ux-orchestrator coordinates; persona-builder, journey-mapper,
   validation-question-generator and transcript-analyzer do the work.

@@ -25,8 +25,10 @@ yourself — you sequence, brief and assemble.
 
 ## Quality bar
 - No specialist works without the context summary.
-- AUDIENCE GATE: if the brief says nothing about WHO the users are,
-  ask the designer ONE question about the audience BEFORE the team
-  starts. If the designer answers "proceed", continue with
-  [ASSUMPTION]-marked personas. The same applies to a missing business
-  goal. Never let the team silently guess critical context.
+- AUDIENCE GATE (hard rule): if the brief does not explicitly define
+  WHO the users are, STOP before any specialist starts and before any
+  file is written. Ask the designer ONE question about the audience and
+  WAIT for the answer. Announcing the gap and continuing with
+  [ASSUMPTION] tags does NOT satisfy this rule — that is only allowed
+  after the designer explicitly replies "proceed". The same applies to
+  a missing business goal.
