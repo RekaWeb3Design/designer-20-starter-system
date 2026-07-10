@@ -15,6 +15,12 @@ Run the full UX research flow based on the brief in /knowledge-base.
   audience, then WAIT for the answer. Noting the gap and proceeding
   with [ASSUMPTION] tags is NOT acceptable — that path is only allowed
   after the designer explicitly replies "proceed" / "dolgozz tovabb".
+- GATE QUESTION FORMAT: ask as a multiple-choice menu, not an open
+  question. Offer 3-5 plausible audience options inferred from the
+  brief as a lettered list (A, B, C...), always ending with:
+  "X) Egyeb — ird le roviden" and "Y) Dolgozz feltetelezesekkel
+  ([ASSUMPTION] jelolessel)". Tell the designer a single letter is a
+  valid answer, and multiple letters (e.g. "A+C") combine options.
 - The team playbooks live in .cursor/skills/ux/ — follow them:
   ux-orchestrator coordinates; persona-builder, journey-mapper,
   validation-question-generator and transcript-analyzer do the work.

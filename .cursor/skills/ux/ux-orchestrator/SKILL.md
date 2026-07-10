@@ -32,3 +32,9 @@ yourself — you sequence, brief and assemble.
   [ASSUMPTION] tags does NOT satisfy this rule — that is only allowed
   after the designer explicitly replies "proceed". The same applies to
   a missing business goal.
+- GATE QUESTION FORMAT: ask as a multiple-choice menu, not an open
+  question. Offer 3-5 plausible audience options inferred from the
+  brief as a lettered list (A, B, C...), always ending with:
+  "X) Egyeb — ird le roviden" and "Y) Dolgozz feltetelezesekkel
+  ([ASSUMPTION] jelolessel)". Tell the designer a single letter is a
+  valid answer, and multiple letters (e.g. "A+C") combine options.
