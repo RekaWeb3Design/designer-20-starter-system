@@ -6,6 +6,9 @@ Run the full UX research flow based on the brief in /knowledge-base.
 - Read knowledge-base/brief.md first. If client emails or transcripts
   exist in knowledge-base/, use them as source material.
 - Work from best practices, production grade quality.
+- LANGUAGE: write ALL outputs in the language of the brief (Hungarian
+  brief -> Hungarian deliverables, with proper accents). Keep the
+  [ASSUMPTION] marker itself unchanged.
 - The team playbooks live in .cursor/skills/ux/ — follow them:
   ux-orchestrator coordinates; persona-builder, journey-mapper,
   validation-question-generator and transcript-analyzer do the work.

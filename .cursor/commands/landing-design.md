@@ -8,6 +8,8 @@ copy and a working local preview.
   first if it does not exist yet).
 - If /output/tech-stack.md exists (from /build-project), treat it as a
   constraint; otherwise default to Astro + Tailwind, static-first.
+- LANGUAGE: write all outputs (copy included!) in the language of the
+  brief — Hungarian brief -> Hungarian deliverables, proper accents.
 - The team playbooks live in .cursor/skills/ui/ — follow them in order.
 - Every stage writes its artifact to /output/landing-design/ BEFORE the
   next stage starts, so the designer can review at any point.

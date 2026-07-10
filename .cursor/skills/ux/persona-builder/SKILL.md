@@ -22,6 +22,9 @@ description: Build 3-5 evidence-based personas from a project brief
 - Personas must be clearly distinct — merge overlapping ones.
 - No demographic filler (age, hobbies) unless it drives a design decision.
 - Ground every statement in the source material where possible.
+- Tag [ASSUMPTION] selectively: only claims whose falsity would change
+  a design decision. If every sentence carries the tag, the signal is
+  lost — put context-level assumptions in ONE note at the top instead.
 
 ## Output
 /output/ux-research/personas.md

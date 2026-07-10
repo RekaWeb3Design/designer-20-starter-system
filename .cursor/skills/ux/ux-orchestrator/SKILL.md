@@ -25,5 +25,8 @@ yourself — you sequence, brief and assemble.
 
 ## Quality bar
 - No specialist works without the context summary.
-- If the brief is missing critical info (audience, goal), STOP and ask
-  the designer — don't let the team guess.
+- AUDIENCE GATE: if the brief says nothing about WHO the users are,
+  ask the designer ONE question about the audience BEFORE the team
+  starts. If the designer answers "proceed", continue with
+  [ASSUMPTION]-marked personas. The same applies to a missing business
+  goal. Never let the team silently guess critical context.

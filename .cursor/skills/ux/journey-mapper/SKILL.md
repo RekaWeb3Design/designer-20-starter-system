@@ -22,6 +22,9 @@ description: Build a user journey for every persona produced by
   identical, say so explicitly instead of inventing differences.
 - Every stage needs at least one concrete opportunity, phrased as a
   design decision (not "improve UX").
+- Tag [ASSUMPTION] selectively: only claims whose falsity would change
+  a design decision. If every sentence carries the tag, the signal is
+  lost — put context-level assumptions in ONE note at the top instead.
 
 ## Output
 /output/ux-research/journeys.md
