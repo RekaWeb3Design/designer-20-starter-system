@@ -22,6 +22,9 @@ yourself — you sequence, brief and assemble.
 5. Assemble: write a 1-page overview (summary.md) linking the outputs,
    listing every [ASSUMPTION] found, and naming the 3 things the
    designer should review first.
+6. Package: call report-designer to turn the finished markdown files
+   into /output/ux-research/report.html — the client-presentable
+   version. Verify the file exists before declaring the run complete.
 
 ## Quality bar
 - No specialist works without the context summary.

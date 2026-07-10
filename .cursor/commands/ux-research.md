@@ -23,7 +23,8 @@ Run the full UX research flow based on the brief in /knowledge-base.
   valid answer, and multiple letters (e.g. "A+C") combine options.
 - The team playbooks live in .cursor/skills/ux/ — follow them:
   ux-orchestrator coordinates; persona-builder, journey-mapper,
-  validation-question-generator and transcript-analyzer do the work.
+  validation-question-generator and transcript-analyzer do the work;
+  report-designer packages the result for the client.
 
 ## Steps
 1. Act as ux-orchestrator: read the brief, extract the project context
@@ -36,10 +37,14 @@ Run the full UX research flow based on the brief in /knowledge-base.
    qualitative interview guide + quantitative survey questions.
 5. If transcripts are available in knowledge-base/: transcript-analyzer
    analyzes them and cross-references the findings with the personas.
+6. report-designer: after summary.md is written, generate report.html —
+   a single self-contained, client-presentable HTML report from the
+   markdown outputs (see .cursor/skills/ux/report-designer/SKILL.md).
 
 ## Output
 Write all results to /output/ux-research/ as separate files:
-personas.md, journeys.md, validation.md (and transcript-insights.md if run).
+personas.md, journeys.md, validation.md (and transcript-insights.md if
+run), summary.md, and report.html as the client-facing package.
 
 Mark every statement that is NOT supported by the source material
 with [ASSUMPTION], so the designer can review it.
