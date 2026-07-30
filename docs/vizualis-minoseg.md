@@ -191,7 +191,60 @@ indoklás. Ha bármelyik `NEM`, javítsd, és futtasd újra.
 
 ---
 
-## 10. A mérce egy mondatban
+## 10. Konkrét tiltások — ezeket már megfizettük
+
+Az alábbi kilenc hiba mind egy valódi futásból jött, és mind **átment** a
+korábbi szabályrendszeren. Ezek nem stílus-kérdések: ha bármelyik előfordul,
+a build hibás.
+
+**1. Szöveg képen: egy gradiens NEM elég.**
+Az alsó `to top` scrim a szövegblokk *alján* sötét, de az eyebrow/kicker
+magasságában már átlátszó — ott a szöveg olvashatatlan lesz egy világos
+fotón. Kötelező **kétrétegű scrim**: alsó (`0.85→0` felfelé) **és** oldalsó
+(`to right`, a szöveg-hasáb alatt), vagy dedikált scrim a szövegblokk alatt.
+Ellenőrzés: a *legfelső* szövegelem alatt is legyen legalább 0.45 alfa.
+
+**2. Átlapolás csak kártyát vagy médiát emelhet — szöveget soha.**
+A negatív margót (`space.overlap`) sose a szöveget tartalmazó rácsra tedd,
+csak arra az elemre, ami átlapol (pl. az űrlap-kártya). Egy `-5rem` a teljes
+rácson a címet a fotó alá húzza, ahol nincs alatta scrim.
+
+**3. Full-bleed elem grid-gyerekként kinyújtást igényel.**
+Ha egy sáv/kép `aspect-ratio`-val van méretezve és a szülő `grid`/`flex`,
+a böngésző NEM nyújtja ki: az arány fogja megszabni a szélességét (nálunk
+1885px helyett 653px lett, és véletlen levágásnak látszott). Full-bleed
+elemre mindig: `inline-size: 100%` + `justify-self: stretch`.
+
+**4. Egy szekcióban legfeljebb két tartalmi hasáb (+ egy média).**
+És **soha ne szűkíts kétszer**: ha a rács mellé `padding-inline-end`-del is
+helyet foglalsz a képnek, a hasábok összeérnek. Vagy a kép valódi
+rács-oszlop, vagy absolute + padding — a kettő együtt tilos.
+
+**5. Két display-méretű szövegblokk nem követheti egymást.**
+H2 + nagy idézet közvetlenül egymás alatt versenyez és tömör hatást ad.
+Az egyik legyen alárendelt (`type.h3` méret, csökkentett kontraszt).
+
+**6. Nyers, levágott képszél tilos.**
+Minden képnek legyen kezelése: radius vagy maszk, plusz tint/blend a
+háttér felé. Egy fotó, ami csak „odaáll" a szekció szélére, random-nak
+látszik — akkor is, ha technikailag ott van a helye.
+
+**7. Hiányzó kliensadat sosem badge a felületen.** (Lásd a builder skillt:
+demo-érték az adat-rétegben + `HIANYZO-ADATOK.md`.)
+
+**8. A reveal-animáció nem hagyhat tartósan láthatatlan tartalmat.**
+`IntersectionObserver` + `once: true` esetén, ha a hidratálás késik vagy a
+JS elhasal, a tartalom `opacity: 0`-n ragad. Kötelező: a kezdőállapot
+CSS-ben csak akkor legyen rejtett, ha a JS már fut (`.js-ready` osztály a
+`<html>`-en), vagy `@media (prefers-reduced-motion)` és no-JS esetén
+`opacity: 1`. **A tartalom láthatósága nem függhet animációtól.**
+
+**9. „12/12 IGEN" böngésző nélkül nem írható ki.**
+Ha nincs eszköz screenshotra, a self-review nem IGEN, hanem
+`NEM ELLENŐRIZVE` — és a builder ezt kimondja a záró összefoglalóban,
+hogy a designer tudja: rá van bízva a vizuális átvétel.
+
+## 11. A mérce egy mondatban
 
 > Ha a kész oldal screenshotját fel lehetne tenni egy Webflow-showcase-be
 > vagy egy Land-book-listába, és nem lógna ki lefelé — akkor kész.

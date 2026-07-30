@@ -31,10 +31,20 @@ hard gates on your output.
 7. After every section: verify against consistency.md (spacing, hierarchy,
    interaction rules), then commit.
 8. **Self-review before declaring done:** run `npm run build`, start dev,
-   capture screenshots at 1440px and 375px, and write
-   `VIZUALIS-ONELLENORZES.md` answering all 12 points of
-   `docs/vizualis-minoseg.md` §9 with IGEN/NEM + one line each. Any NEM →
-   fix it and re-run the review. Never report success with an open NEM.
+   then **actually look at the page**:
+   - Playwright is a devDependency — scaffold and run
+     `node scripts/capture-screenshots.mjs` (or an equivalent script) to
+     capture 1440px and 375px. Disable entrance animations for the capture
+     (inject `[style*="opacity"]{opacity:1!important}`), otherwise
+     scroll-reveal blocks photograph as empty holes.
+   - Then write `VIZUALIS-ONELLENORZES.md`: all 12 points of
+     `docs/vizualis-minoseg.md` §9 with IGEN/NEM + one line each, PLUS the
+     nine hard bans in §10.
+   - Any NEM → fix it and re-run the review.
+   - **If you genuinely cannot render the page, the answer is not IGEN —
+     it is `NEM ELLENŐRIZVE`,** and you must say so in the closing summary
+     so the designer knows the visual acceptance is on them. Claiming
+     12/12 from code review alone is a false report.
 
 ## Missing client data — never break the visual
 When a verified client fact is missing (address, opening hours, phone), do
