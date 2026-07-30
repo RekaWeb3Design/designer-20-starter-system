@@ -1,0 +1,33 @@
+# Függőségek és buildek — ezek soha ne kerüljenek a repóba
+node_modules/
+dist/
+.astro/
+.output/
+.vercel/
+.netlify/
+build/
+
+# Környezeti változók, kulcsok
+.env
+.env.*
+!.env.example
+
+# Editor / OS
+.DS_Store
+Thumbs.db
+*.log
+npm-debug.log*
+.vscode/
+.idea/
+
+# Teszt-artefaktok
+test-results/
+playwright-report/
+coverage/
+
+# FIGYELEM — az output/ SZÁNDÉKOSAN nincs ignorálva:
+# a generált kutatás, terv és design-guide a te munkád, érdemes verziózni.
+# Kivéve a futtatható site build-je, ami újragenerálható:
+output/**/site/node_modules/
+output/**/site/dist/
+output/**/site/.astro/

@@ -44,11 +44,38 @@ másolod ki — kész.
 |---|---|---|
 | 2. | Kontextusfájl-sablonok | `CLAUDE.md` + `.cursor/rules/` |
 | 3. | `/ux-research` + a UX-csapat 5 skillje | `.cursor/commands/` + `.cursor/skills/ux/` |
-| 4. | `/landing-design`, `/generate-image` + a UI-csapat 6 agentje | `.cursor/skills/ui/` |
+| 4. | `/landing-design`, `/generate-image` + a UI-csapat 6 agentje + a `design-guide` | `.cursor/skills/ui/` + `docs/vizualis-minoseg.md` |
 | 5. | `/build-project` + a Tech Bridge 5 agentje (qa self-healinggel) | `.cursor/skills/tech-bridge/` |
 | 6. | Mentőöv: hibakezelési protokoll + Supabase/Resend bekötés | `docs/` + `prompts/06-*.md` |
 | 7. | Handover-checklist + garancia-sablon | `docs/` + `prompts/07-*.md` |
 | 1–8. | Az összes heti prompt-minta | `prompts/` |
+
+## A 4. héttől: két pont, ahol TE döntesz
+
+A `/landing-design` nem egy nagy futás, hanem **kétszer megáll nálad**:
+
+**1. Inspiráció-kapu — mindjárt az elején.** Mielőtt bármit csinálna, megkérdezi:
+
+```
+Szeretnél vizuális inspirációt megadni, mielőtt nekiállok?
+A) Igen, URL(ek)          C) Nem — kutass magad
+B) Igen, screenshot(ok)   D) Nem konkrét oldal, de van stílus-irányom
+```
+
+Ez a lépés hozza a legnagyobb ugrást: **egy jó referencia-oldal többet javít az
+eredményen, mint tíz kör promptolás.** A rendszer a szerkezetet, arányokat és
+energiát veszi át — a tartalmat és a brandet nem. (Az oldalak megnyitásához a
+Firecrawl MCP kell, lásd `docs/mcp-setup.md`.)
+
+**2. Design guide jóváhagyás — mielőtt az oldal megépülne.** A tokenekből készít egy
+megnyitható, szedett `design-guide.html`-t (paletta kontraszt-arányokkal, valódi
+betűkkel rendered tipó-skála, formanyelv, komponens-állapotok), és megáll:
+`A) mehet · B) módosítást kérek · C) mutass másik irányt`. **Itt olcsó a javítás — egy
+kész weboldalt újraépíteni drága.**
+
+A vizuális mérce, amit a rendszer betart: `docs/vizualis-minoseg.md` — 15 pontos
+önellenőrzés, reszponzivitás négy méreten, kötelező mikrointerakciók, és tíz konkrét
+tilalom, mindegyik egy valódi hibából.
 
 ## A rendszer logikája
 
