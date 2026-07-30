@@ -65,6 +65,49 @@ Ha a projekted egy olyan mappa alatt van, ahol feljebb létezik egy régi
 dependency-fáját próbálja megoldani — és annak a konfliktusaira hasal el.
 Ilyenkor a kézi mcp.json a legrövidebb út.
 
+## Firecrawl MCP — a valódi web
+
+Ez nem UI-library, mégis ez hozza a legnagyobb különbséget: ezzel tudja az AI
+**megnyitni a megadott inspirációs oldalt** és kiolvasni a szerkezetét, és
+ezzel kutat friss adatból az `intelligence` agent — a betanított emlékezete
+helyett.
+
+```json
+"firecrawl": {
+  "command": "npx",
+  "args": ["-y", "firecrawl-mcp"],
+  "env": { "FIRECRAWL_API_KEY": "fc-IDE_A_SAJAT_KULCSOD" }
+}
+```
+
+Kulcs: **firecrawl.dev** — van ingyenes szint. Nélküle a `/landing-design`
+inspiráció-kapuja csak a szóban megadott irányt tudja feldolgozni.
+
+## AI-vezérelt telepítés — ha nem akarsz configot szerkeszteni
+
+Másold be ezt Cursorba, és végigvezet:
+
+```
+Segíts bekötni a UI-gyorsítóhoz szükséges MCP szervereket ebben a
+projektben, és vezess végig lépésről lépésre.
+
+Amire szükségem van: shadcn/ui, Magic UI, React Bits és Firecrawl.
+
+Így haladj:
+1. Nézd meg, létezik-e már .cursor/mcp.json, és mi van benne. Mondd meg,
+   melyik hiányzik — ne írd felül, amit már beállítottam.
+2. Írd bele a hiányzókat egyesével, és minden lépés után mondd meg, mit
+   csináltál, és nekem mit kell tennem (pl. Cursor újraindítás).
+3. A Firecrawlhoz API-kulcs kell: mondd el, hol szerzem be, és hova írjam —
+   a kulcsot NE te találd ki.
+4. A végén adj ellenőrző listát: melyik szervert milyen teszt-paranccsal
+   nézzem meg.
+5. Ha valami hibára fut, előbb magyarázd el, MI az oka, és csak utána
+   javasolj megoldást.
+
+Egyszerre egy lépést csinálj, és várd meg a visszajelzésemet.
+```
+
 ## Opcionális
 
 - React Bits (animált komponensek): `npx reactbits-dev-mcp-server`
