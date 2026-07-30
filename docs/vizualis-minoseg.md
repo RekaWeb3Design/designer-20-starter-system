@@ -197,6 +197,13 @@ projekt ezeken épül és ezeken ellenőrződik:
   nincs hover.
 - A táblázatok és a kódblokkok saját `overflow-x: auto` konténerben
   görgethetők; az oldal törzse soha nem görög vízszintesen.
+- **Full-bleed háttér ≠ full-bleed szöveg.** Ha egy szekciónak teljes
+  szélességű képe vagy színsávja van, a *szöveg* akkor is a tartalmi
+  konténert (`layout.contentMax` + gutter) követi. Nagy képernyőn ez a
+  leggyakoribb hiba: a háttér kifut, a szöveg a viewport bal széléhez
+  tapad, a fejléc viszont a konténerhez igazodik — és a kettő láthatóan
+  elcsúszik. **Ellenőrzés 1920px-en:** a hero címsor bal széle ugyanott
+  van, mint a fejléc logóé.
 
 ---
 
@@ -216,7 +223,14 @@ listaelemre, linkre, űrlapmezőre — mindenre, aminek van értelme.
 | Navigációs elem | aktív állapot jelölve, hover aláhúzás/háttér |
 
 **Szabályok:**
-- Időzítés `motion.fast`–`motion.base` (150–250ms), `motion.easing`-gel.
+- **A hover-görbe lassan fut ki, nem gyorsan indul.** A belépőkre való
+  `cubic-bezier(0.2, 0.8, 0.2, 1)` hoveren **rántósnak** hat, mert azonnal
+  nagyot ugrik. Hoverre: `cubic-bezier(0.33, 1, 0.68, 1)` (easeOutCubic),
+  **240–300ms** — külön `motion.hover` token.
+- **Kép-zoom lassabb, mint a többi:** 450–550ms (`motion.zoom`). Egy 200ms-os
+  képnagyítás mindig olcsónak hat.
+- Szín/határ-váltás gyorsabb (150–180ms), elmozdulás és árnyék lassabb —
+  együtt ez adja a „smooth" érzetet.
 - **A puszta `opacity: 0.9` nem visszajelzés.** Legyen elmozdulás, árnyék,
   méret vagy szín-váltás.
 - `:focus-visible` mindenhol, ahol `:hover` van — billentyűzettel is látszik.
@@ -275,7 +289,7 @@ futtasd újra.
 
 ## 13. Konkrét tiltások — ezeket már megfizettük
 
-Az alábbi kilenc hiba mind egy valódi futásból jött, és mind **átment** a
+Az alábbi tíz hiba mind egy valódi futásból jött, és mind **átment** a
 korábbi szabályrendszeren. Ezek nem stílus-kérdések: ha bármelyik előfordul,
 a build hibás.
 
@@ -321,7 +335,13 @@ CSS-ben csak akkor legyen rejtett, ha a JS már fut (`.js-ready` osztály a
 `<html>`-en), vagy `@media (prefers-reduced-motion)` és no-JS esetén
 `opacity: 1`. **A tartalom láthatósága nem függhet animációtól.**
 
-**9. „12/12 IGEN" böngésző nélkül nem írható ki.**
+**9. Full-bleed háttér mellett a szöveg NEM tapadhat a viewport széléhez.**
+A háttér fut ki teljes szélességben, a szövegkonténer a `contentMax`-ot
+követi. Ha a szekció szövege a fejléc logójánál balrébb kezdődik 1920px-en,
+az hiba. (Konkrétan: egy `margin-inline: 0` + `max-width: 55%` felülírta a
+konténer-centrálást, és a hero szövege 300px-rel elcsúszott a fejléctől.)
+
+**10. „12/12 IGEN" böngésző nélkül nem írható ki.**
 Ha nincs eszköz screenshotra, a self-review nem IGEN, hanem
 `NEM ELLENŐRIZVE` — és a builder ezt kimondja a záró összefoglalóban,
 hogy a designer tudja: rá van bízva a vizuális átvétel.

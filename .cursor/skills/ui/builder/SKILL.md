@@ -42,7 +42,7 @@ are hard gates on your output.
      every screenshot look heavily grainy and hides the real result.
    - Then write `VIZUALIS-ONELLENORZES.md`: all 15 points of
      `docs/vizualis-minoseg.md` §12 with IGEN/NEM + one line each, PLUS the
-     nine hard bans in §13.
+     ten hard bans in §13.
    - Any NEM → fix it and re-run the review.
    - **If you genuinely cannot render the page, the answer is not IGEN —
      it is `NEM ELLENŐRIZVE`,** and you must say so in the closing summary
