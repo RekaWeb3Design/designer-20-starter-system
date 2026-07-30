@@ -2,6 +2,11 @@
 
 A kurzus-minimum két INGYENES MCP — ennyi kell a `/landing-design`-hoz.
 
+> **A repo már tartalmaz egy kész `.cursor/mcp.json`-t** (shadcn + Magic UI +
+> React Bits). Ha `git pull` után újraindítod a Cursort, elvileg nincs is
+> teendőd — **Cursor Settings → MCP**, és mindháromnál zöld pötty. Az alábbi
+> lépések akkor kellenek, ha saját projektben állítod be a nulláról.
+
 ## 1) shadcn/ui MCP — a projekt mappájában:
 
 ```
