@@ -64,8 +64,11 @@ B) Igen, screenshot(ok)   D) Nem konkrét oldal, de van stílus-irányom
 
 Ez a lépés hozza a legnagyobb ugrást: **egy jó referencia-oldal többet javít az
 eredményen, mint tíz kör promptolás.** A rendszer a szerkezetet, arányokat és
-energiát veszi át — a tartalmat és a brandet nem. (Az oldalak megnyitásához a
-Firecrawl MCP kell, lásd `docs/mcp-setup.md`.)
+energiát veszi át — a tartalmat és a brandet nem.
+
+> Az oldalak megnyitásához a **Firecrawl MCP** kell. Ez kulcsot igényel, ezért nincs
+> bekapcsolva alapból — a bemásolható blokk: `.cursor/mcp.firecrawl.snippet.json`,
+> a lépések: `docs/mcp-setup.md`. Nélküle a kapu C) és D) opciója működik.
 
 **2. Design guide jóváhagyás — mielőtt az oldal megépülne.** A tokenekből készít egy
 megnyitható, szedett `design-guide.html`-t (paletta kontraszt-arányokkal, valódi

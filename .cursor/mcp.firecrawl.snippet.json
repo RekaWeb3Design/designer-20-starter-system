@@ -1,0 +1,19 @@
+{
+  "_olvass_el": [
+    "Ez NEM aktív config, hanem egy bemásolható darab.",
+    "A Firecrawl MCP-hez API-kulcs kell (firecrawl.dev — van ingyenes szint),",
+    "ezért nincs bekapcsolva alapból: kulcs nélkül pirosan hibázna a Cursorban.",
+    "",
+    "Mire jó: ezzel tudja az AI MEGNYITNI a megadott inspirációs oldalt és",
+    "kiolvasni a szerkezetét (a /landing-design első lépése), illetve ezzel",
+    "kutat friss adatból az intelligence agent - a betanított emlékezete helyett.",
+    "",
+    "Teendő: szerezz kulcsot, majd másold be az alábbi 'firecrawl' blokkot a",
+    ".cursor/mcp.json mcpServers objektumába, és indítsd újra a Cursort."
+  ],
+  "firecrawl": {
+    "command": "npx",
+    "args": ["-y", "firecrawl-mcp"],
+    "env": { "FIRECRAWL_API_KEY": "fc-IDE_A_SAJAT_KULCSOD" }
+  }
+}

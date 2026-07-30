@@ -83,6 +83,11 @@ helyett.
 Kulcs: **firecrawl.dev** — van ingyenes szint. Nélküle a `/landing-design`
 inspiráció-kapuja csak a szóban megadott irányt tudja feldolgozni.
 
+> A repo `.cursor/mcp.json`-ja **szándékosan nem tartalmazza** a Firecrawlt:
+> kulcs nélkül pirosan hibázna. A bemásolható blokk itt van:
+> **`.cursor/mcp.firecrawl.snippet.json`** — szerezz kulcsot, másold át a
+> `firecrawl` blokkot az `mcpServers` objektumba, és indítsd újra a Cursort.
+
 ## AI-vezérelt telepítés — ha nem akarsz configot szerkeszteni
 
 Másold be ezt Cursorba, és végigvezet:
