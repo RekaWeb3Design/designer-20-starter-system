@@ -23,6 +23,38 @@ copy and a working local preview.
 - Every stage writes its artifact to /output/landing-design/ BEFORE the
   next stage starts, so the designer can review at any point.
 
+## Step 0 — INSPIRÁCIÓ-KAPU (mindig ez az első)
+
+Mielőtt BÁRMIT csinálnál, állj meg, és tedd fel EZT az egy kérdést a
+designernek, betűjeles menüként. Ne írj addig egyetlen fájlt sem:
+
+```
+Szeretnél vizuális inspirációt megadni, mielőtt nekiállok?
+Ez a leggyorsabb módja annak, hogy elsőre jó irányba induljunk.
+
+A) Igen, URL(ek) — bemásolom a linkeket
+B) Igen, screenshot(ok) — betettem őket a projekt inspiracio/ mappájába
+C) Nem — dolgozz a saját kategória-kutatásodból (intelligence)
+D) Nem konkrét oldal, de van stílus-irányom — leírom szóban
+```
+
+- **A)** Nyisd meg a megadott oldalakat (Firecrawl MCP vagy web-eszköz), és
+  nyerd ki belőlük a KONKRÉTUMOKAT: hero-minta, típusskála-arányok, hol van
+  a sötét sáv, mennyi a szekció-térköz, milyen a mozgás, mitől hat drágának.
+- **B)** Olvasd be a képeket ugyanezekre a szempontokra.
+- **C)** Az intelligence a `docs/vizualis-minoseg.md` szerint két poolt kutat
+  (in-category + award-szint).
+- **D)** A leírást fordítsd le konkrét paraméterekre, és írd be az
+  intelligence.md-be, hogy honnan jött.
+
+A választ és a kinyert megfigyeléseket az `intelligence.md` **„Megadott
+inspiráció"** szakaszába rögzítsd — a creative-director ebből dolgozik.
+A megadott inspiráció **felülírja** a kategória-átlagot: az a mérce, nem a
+versenytársak.
+
+FONTOS: ez nem stílusmásolás. A szerkezetet, arányokat és energiát vesszük
+át, a tartalmat és a brandet nem.
+
 ## Steps (in this order)
 1. intelligence — visual competitor & category research → intelligence.md
 2. creative-director — section architecture, tone, non-negotiable design
