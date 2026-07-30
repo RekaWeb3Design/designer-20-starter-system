@@ -66,7 +66,13 @@ FONTOS: ez nem stílusmásolás. A szerkezetet, arányokat és energiát vesszü
      note the gap in plan.md)
 4. designer — implementable design tokens from the brand direction
    → design-tokens.json
-5. builder — assemble the site using copy.md + design-tokens.json +
+5. design-guide — a bemutatható, egy oldalas design guide a tokenekből és a
+   brand-irányból → design-guide.html, majd **HARD GATE: állj meg és kérj
+   jóváhagyást** (A: mehet · B: módosítást kérek · C: mutass másik irányt).
+   A builder csak A) után indul. Ha nincs kliens-brandbook, EZ a lépés
+   pótolja: itt születik meg a vizuális szerződés, amit a designer lát és
+   jóváhagy — nem egy JSON-ban, hanem megnézhető formában.
+6. builder — assemble the site using copy.md + design-tokens.json +
    the installed UI library MCPs (shadcn/ui, Magic UI, React Bits).
    At least 4 components come from the MCP catalogs — do NOT rebuild them
    from memory. Closes with the 15-point visual self-review (4 viewport widths).
@@ -74,6 +80,6 @@ FONTOS: ez nem stílusmásolás. A szerkezetet, arányokat és energiát vesszü
 
 ## Output
 /output/landing-design/: intelligence.md, plan.md, consistency.md, copy.md,
-brand.md, design-tokens.json, site/ (runnable),
+brand.md, design-tokens.json, design-guide.html (jóváhagyva), site/ (runnable),
 VIZUALIS-ONELLENORZES.md, HIANYZO-ADATOK.md.
 Finish with a short summary: what to review first, and any [ASSUMPTION]s.

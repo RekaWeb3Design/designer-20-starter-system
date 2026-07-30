@@ -13,8 +13,12 @@ You do not design and you do not write copy — you ASSEMBLE, precisely.
 are hard gates on your output.
 
 ## Process
+0. **Csak jóváhagyott design guide után indulj.** Ha a
+   `design-guide.html` nem létezik, vagy a designer nem adott rá A) választ,
+   ÁLLJ MEG és kérd be — a jóváhagyott guide a szerződés.
 1. Inputs: plan.md (section order + per-section art direction), copy.md
-   (content), design-tokens.json (visual contract), consistency.md (rules).
+   (content), design-tokens.json (visual contract), consistency.md (rules),
+   design-guide.html (a jóváhagyott vizuális szerződés).
 2. Scaffold: Astro + Tailwind by default (or what tech-stack.md says).
    Wire design-tokens.json into the Tailwind config / CSS variables —
    including the gradient, shadow, motion and type tokens, not just colours.
