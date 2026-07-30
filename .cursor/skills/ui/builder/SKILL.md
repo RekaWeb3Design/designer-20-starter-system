@@ -8,8 +8,9 @@ description: Assemble the working site from copy + design tokens +
 
 You do not design and you do not write copy — you ASSEMBLE, precisely.
 
-**MANDATORY FIRST READ: `docs/vizualis-minoseg.md`.** Sections 7 and 9 are
-hard gates on your output.
+**MANDATORY FIRST READ: `docs/vizualis-minoseg.md`.** Sections 7 (MCP), 9
+(responsive), 10 (micro-interactions), 11 (back-to-top) and 12 (self-review)
+are hard gates on your output.
 
 ## Process
 1. Inputs: plan.md (section order + per-section art direction), copy.md
@@ -34,17 +35,19 @@ hard gates on your output.
    then **actually look at the page**:
    - Playwright is a devDependency — scaffold and run
      `node scripts/capture-screenshots.mjs` (or an equivalent script) to
-     capture 1440px and 375px. Disable entrance animations for the capture
+     capture 320px, 768px, 1440px and 1920px. Disable entrance animations for the capture
      (inject `[style*="opacity"]{opacity:1!important}`), otherwise
-     scroll-reveal blocks photograph as empty holes.
-   - Then write `VIZUALIS-ONELLENORZES.md`: all 12 points of
-     `docs/vizualis-minoseg.md` §9 with IGEN/NEM + one line each, PLUS the
-     nine hard bans in §10.
+     scroll-reveal blocks photograph as empty holes. CAREFUL: exclude the
+     grain/noise overlay from that override — forcing it to opacity 1 makes
+     every screenshot look heavily grainy and hides the real result.
+   - Then write `VIZUALIS-ONELLENORZES.md`: all 15 points of
+     `docs/vizualis-minoseg.md` §12 with IGEN/NEM + one line each, PLUS the
+     nine hard bans in §13.
    - Any NEM → fix it and re-run the review.
    - **If you genuinely cannot render the page, the answer is not IGEN —
      it is `NEM ELLENŐRIZVE`,** and you must say so in the closing summary
      so the designer knows the visual acceptance is on them. Claiming
-     12/12 from code review alone is a false report.
+     15/15 from code review alone is a false report.
 
 ## Missing client data — never break the visual
 When a verified client fact is missing (address, opening hours, phone), do

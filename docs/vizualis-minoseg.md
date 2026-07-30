@@ -170,11 +170,85 @@ A választást a brand-irány dönti el, nem a divat: kertészetnél `waves`/
 
 ---
 
-## 9. Önellenőrzés — a builder ezt lefuttatja, mielőtt kész
+## 9. Reszponzivitás — négy méret, nem kettő
 
-Készíts screenshotot `1440px` és `375px` szélességen, és írd meg a
-`VIZUALIS-ONELLENORZES.md`-t: minden pontnál `IGEN`/`NEM` + egy soros
-indoklás. Ha bármelyik `NEM`, javítsd, és futtasd újra.
+Nem „mobilbarát" a cél, hanem **négy szándékosan megtervezett méret**. Minden
+projekt ezeken épül és ezeken ellenőrződik:
+
+| Sáv | Szélesség | Elrendezés |
+|---|---|---|
+| **Mobil** | 320–767px | 1 hasáb; sticky elemek minimalizálva; a hero szövege nem lóghat ki a képből (`object-position` igazítva) |
+| **Tablet** | 768–1023px | 2 hasáb ott, ahol értelme van; a 3-elemű sorok 2+1-re bomlanak, NEM zsugorodnak egyformán |
+| **Desktop** | 1024–1439px | a teljes tervezett elrendezés |
+| **Nagy képernyő** | ≥1440px (1920/2560 is!) | a tartalom **nem úszik el**: konténer `contentMax`, DE a full-bleed médiák a teljes szélességet használják, és a gutterek nőnek |
+
+**Ellenőrizhető szabályok:**
+- **Nincs vízszintes scroll** egyetlen szélességen sem — teszt: 320, 375, 768,
+  1024, 1440, 1920.
+- **Érintőfelület minimum 44×44px**, és két érinthető elem között legalább 8px.
+- A szövegsor **soha nem hosszabb 70 karakternél**, akkor sem, ha 2560px-en
+  nézik. Nagy képernyőn a felesleges hely gutterbe és médiába megy, nem a
+  sorhosszba.
+- 1920px-en a hero **nem lehet üres**: vagy full-bleed a média, vagy a
+  tipográfia skálázódik vele (a `clamp()` felső határa elég nagy legyen).
+- A képek `srcset`/`sizes` attribútummal mennek, hogy mobilon ne töltsön le
+  2400px-es fájlt.
+- Semmilyen funkció nem érhető el **kizárólag hoverrel** — érintőképernyőn
+  nincs hover.
+- A táblázatok és a kódblokkok saját `overflow-x: auto` konténerben
+  görgethetők; az oldal törzse soha nem görög vízszintesen.
+
+---
+
+## 10. Mikrointerakciók — alapértelmezés, nem extra
+
+**Minden projektben, minden dizájnnál.** Nem csak gombra: képre, kártyára,
+listaelemre, linkre, űrlapmezőre — mindenre, aminek van értelme.
+
+| Elem | Kötelező visszajelzés |
+|---|---|
+| Gomb | hover: háttér/árnyék + 1–2px emelés · active: 1px vissza · focus-visible: látható gyűrű |
+| Kártya | hover: `translateY(-3px)` + `shadow.sm → shadow.lg` |
+| Kép kártyában/galériában | hover: `scale(1.03)` a képen, a konténer `overflow: hidden` — a keret nem mozdul, csak a kép |
+| Link | hover: aláhúzás-animáció (`text-underline-offset` vagy növekvő vonal), nem puszta színváltás |
+| Nyilas CTA | hover: a nyíl 4px-t csúszik a haladás irányába |
+| Űrlapmező | focus: gyűrű + halvány háttérváltás; hiba: szöveg + ikon, nem csak szín |
+| Navigációs elem | aktív állapot jelölve, hover aláhúzás/háttér |
+
+**Szabályok:**
+- Időzítés `motion.fast`–`motion.base` (150–250ms), `motion.easing`-gel.
+- **A puszta `opacity: 0.9` nem visszajelzés.** Legyen elmozdulás, árnyék,
+  méret vagy szín-váltás.
+- `:focus-visible` mindenhol, ahol `:hover` van — billentyűzettel is látszik.
+- `prefers-reduced-motion: reduce` esetén a transzformációk elmaradnak, de a
+  szín/árnyék-visszajelzés **marad** (a visszajelzés akadálymentességi kérdés,
+  nem dísz).
+- Egy elemen legfeljebb két tulajdonság animálódjon egyszerre.
+
+---
+
+## 11. Kötelező oldal-elemek
+
+**Back-to-top gomb** — kötelező minden oldalon, ami **kettőnél több
+szekcióból** áll (vagy hosszabb 2× viewportnál):
+- jobb alsó sarok, `position: fixed`, a `safe-area` figyelembevételével
+- **csak görgetés után jelenik meg** (kb. 1,5 viewport), fade + kis elmozdulás
+- minimum 44×44px, `aria-label="Vissza az oldal tetejére"`
+- `scroll-behavior: smooth`, de `prefers-reduced-motion` esetén azonnali ugrás
+- nem takarhat CTA-t vagy fontos tartalmat mobilon
+- amikor rejtett, ne legyen fókuszálható (`inert` vagy `visibility: hidden`)
+
+Hosszú oldalnál (5+ szekció) **javasolt**: olvasás-jelző (`scroll-progress`)
+és/vagy ragadós szekció-navigáció.
+
+---
+
+## 12. Önellenőrzés — a builder ezt lefuttatja, mielőtt kész
+
+Készíts screenshotot **320, 768, 1440 és 1920px** szélességen (a 375 és 1024
+opcionális, de ajánlott), és írd meg a `VIZUALIS-ONELLENORZES.md`-t: minden
+pontnál `IGEN`/`NEM` + egy soros indoklás. Ha bármelyik `NEM`, javítsd, és
+futtasd újra.
 
 1. A hero legalább 60vh, és van benne valódi kép vagy nagy effekt?
 2. A H1 és a törzs között legalább 4× méretugrás?
@@ -188,10 +262,18 @@ indoklás. Ha bármelyik `NEM`, javítsd, és futtasd újra.
 10. 375px-en nincs vízszintes scroll, és a hero H1 nem tör 4-nél több sorba?
 11. Nincs „PENDING"/placeholder badge a látható felületen?
 12. `npm run build` hibátlan, `npm run dev` fut?
+13. **Mind a négy méret rendben** (320 / 768 / 1440 / 1920): sehol nincs
+    vízszintes scroll, tableten nem zsugorodnak egyformára a 3-as sorok, és
+    1920-on nem úszik el a tartalom?
+14. **Mikrointerakció mindenen, aminek van értelme** — nem csak gombon:
+    kártya emelkedik, kép nagyít a kereten belül, link aláhúzása animált,
+    űrlapmezőnek van fókusz-állapota? (§10 táblázata)
+15. **Back-to-top gomb** — ha az oldal 2 szekciónál hosszabb, ott van,
+    görgetés után jelenik meg, 44px+, `aria-label`-lel? (§11)
 
 ---
 
-## 10. Konkrét tiltások — ezeket már megfizettük
+## 13. Konkrét tiltások — ezeket már megfizettük
 
 Az alábbi kilenc hiba mind egy valódi futásból jött, és mind **átment** a
 korábbi szabályrendszeren. Ezek nem stílus-kérdések: ha bármelyik előfordul,
@@ -244,7 +326,7 @@ Ha nincs eszköz screenshotra, a self-review nem IGEN, hanem
 `NEM ELLENŐRIZVE` — és a builder ezt kimondja a záró összefoglalóban,
 hogy a designer tudja: rá van bízva a vizuális átvétel.
 
-## 11. A mérce egy mondatban
+## 14. A mérce egy mondatban
 
 > Ha a kész oldal screenshotját fel lehetne tenni egy Webflow-showcase-be
 > vagy egy Land-book-listába, és nem lógna ki lefelé — akkor kész.

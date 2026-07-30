@@ -37,7 +37,7 @@ copy and a working local preview.
 5. builder — assemble the site using copy.md + design-tokens.json +
    the installed UI library MCPs (shadcn/ui, Magic UI, React Bits).
    At least 4 components come from the MCP catalogs — do NOT rebuild them
-   from memory. Closes with the 12-point visual self-review.
+   from memory. Closes with the 15-point visual self-review (4 viewport widths).
    → /output/landing-design/site/ with npm run dev working locally.
 
 ## Output
